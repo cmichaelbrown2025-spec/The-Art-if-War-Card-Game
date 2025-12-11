@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Card Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>War Card Game</h1>
+    <div class="game-info">
+        <p>Computer Deck: <span id="computer-deck-count">25</span></p>
+    </div>
+    <div id="game-board">
+        <div id="computer-deck" class="deck"></div>
+        <div id="computer-card" class="card-slot"></div>
+        <div id="player-card" class="card-slot"></div>
+        <div id="player-deck" class="deck"></div>
+    </div>
+    <div class="game-info">
+        <p>Player Deck: <span id="player-deck-count">25</span></p>
+    </div>
+    <button id="play-button">Play Hand</button>
+    <button id="play-again-button">Play Again</button>
+    <button id="custom-deck-button">Create Custom Deck</button>
+    <div id="message-area"></div>
+
+    <div id="deck-builder-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Create Your Custom Deck</h2>
+            <p>Upload 25 images to create your deck. Cards will be assigned values 1-25 based on upload order.</p>
+            <input type="file" id="image-uploader" multiple accept="image/*">
+            <div class="deck-editor">
+                <div id="image-preview-area"></div>
+                <div id="metadata-editor" style="display: none;">
+                    <h3>Card Details (Optional)</h3>
+                    <label for="uploader-name">Your Name:</label>
+                    <input type="text" id="uploader-name" placeholder="Uploader">
+                    <label for="artist-name">Artist Name:</label>
+                    <input type="text" id="artist-name" placeholder="Artist">
+                    <label for="card-description">Description:</label>
+                    <textarea id="card-description" placeholder="Description"></textarea>
+                </div>
+            </div>
+            <button id="save-deck-button">Save Deck</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
